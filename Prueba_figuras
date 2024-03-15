@@ -1,0 +1,44 @@
+package Figuras;
+
+import java.util.Scanner;
+
+public class Prueba_Figuras {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int r, b_rect, h_rect, l, b_trian, h_trian;
+
+        System.out.println("Ingrese el radio del circulo: ");
+        r = entrada.nextInt();
+        System.out.println("Ingrese la base del rectangulo: ");
+        b_rect = entrada.nextInt();
+        System.out.println("Ingrese la altura del rectangulo: ");
+        h_rect = entrada.nextInt();
+        System.out.println("Ingrese el lado del cuadrado: ");
+        l = entrada.nextInt();
+        System.out.println("Ingrese la base del triangulo: ");
+        b_trian = entrada.nextInt();
+        System.out.println("Ingrese la altura del triangulo: ");
+        h_trian = entrada.nextInt();        
+
+        Circulo figura1 = new Circulo(r);
+        Rectangulo figura2 = new Rectangulo(b_rect, h_rect);
+        Cuadrado figura3 = new Cuadrado(l);
+        TrianguloRectangulo figura4 = new TrianguloRectangulo(b_trian, h_trian);
+
+        System.out.println("El area del circulo es = " + figura1.calcularArea());
+        System.out.println("El perimetro del circulo es = " + figura1.calcularPerimetro());
+        System.out.println();
+        System.out.println("El area del rectangulo es = " + figura2.calcularArea());
+        System.out.println("El perimetro del rectangulo es = " + figura2.calcularPerimetro());
+        System.out.println();
+        System.out.println("El area del cuadrado es = " + figura3.calcularArea());
+        System.out.println("El perimetro del cuadrado es = " + figura3.calcularPerimetro());
+        System.out.println();
+        System.out.println("El area del triangulo es = " + figura4.calcularArea());
+        System.out.println("El perimetro del triangulo es = " + figura4.calcularPerimetro());
+
+        figura4.determinarTipoTriangulo();
+    }
+
+}
